@@ -66,27 +66,23 @@ body {
  BOTÃO BASE
 *************************/
 button {
-  button {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* deixa quadrado automaticamente */
-
+  height: 60px;
   border-radius: 14px;
   border: none;
 
   background: #2b2b2b;
   color: #ffffff;
 
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 
   cursor: pointer;
 
-  display: flex;
+  display: flex; /* centralização interna */
   align-items: center;
   justify-content: center;
 
   transition: background 0.15s, transform 0.05s;
-}
 }
 
 /*************************
@@ -123,10 +119,8 @@ button[data-acao="igual"] {
 /*************************
  BOTÃO ZERO
 *************************/
-  button.zero {
+button.zero {
   grid-column: span 2;
-  aspect-ratio: auto; /* remove proporção quadrada */
-}
 }
 
 /*************************
