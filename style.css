@@ -57,7 +57,7 @@ body {
  GRID DE BOTÕES
 *************************/
 .botoes {
-  display: grid;
+  display: grid; /* corrigido */
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
@@ -66,19 +66,27 @@ body {
  BOTÃO BASE
 *************************/
 button {
-  height: 56px;
+  button {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* deixa quadrado automaticamente */
+
   border-radius: 14px;
   border: none;
 
   background: #2b2b2b;
   color: #ffffff;
 
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
 
   cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   transition: background 0.15s, transform 0.05s;
+}
 }
 
 /*************************
@@ -115,8 +123,10 @@ button[data-acao="igual"] {
 /*************************
  BOTÃO ZERO
 *************************/
-button.zero {
+  button.zero {
   grid-column: span 2;
+  aspect-ratio: auto; /* remove proporção quadrada */
+}
 }
 
 /*************************
